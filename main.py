@@ -4,8 +4,8 @@ import csv
 from datetime import datetime
 
 # ====================== 请修改这里的路径 ======================
+ORIGIN_FILES_DIR = r"D:\【手机移出备份2026.06.15】\DCIM\Camera"   # 需要扫描的文件夹
 STORAGE_DIR = r"E:\【NAS照片整理】"   # 信息库csv所在文件夹
-ORIGIN_FILES_DIR = r"R:\ORIGIN_storage"   # 需要扫描的文件夹
 DB_FILENAME = "mao_file_index_db.csv"
 DUPLICATE_NAME_DB_FILENAME = "mao_duplicated_name_file_index_db.csv"
 COMPLETE_RECORD_FILENAME = "mao_record_completed_dir.csv"
@@ -158,6 +158,11 @@ def record_completed_dir(db_dir: str, db_name: str, completed_dir: str):
     print(f"INFO - 已追加根目录到已完成遍历信息库 - {completed_dir}")
 
 def main():
+    input(f"按 3 次任意键开始处理：{ORIGIN_FILES_DIR}")
+    input(f"按 2 次任意键开始处理：{ORIGIN_FILES_DIR}")
+    input(f"按 1 次任意键开始处理：{ORIGIN_FILES_DIR}")
+    print(f"INFO - 开始处理：{ORIGIN_FILES_DIR}")
+
     # 1.加载已知库，初始化新增库
     known_db, known_filenames = load_known_database(STORAGE_DIR, DB_FILENAME)
     new_db = {}
