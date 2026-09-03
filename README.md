@@ -87,3 +87,34 @@ INFO - 完成加载归档库，已归档 0 个文件
 INFO - 开始增量拷贝...
 INFO - 已归档文件： 3106/11841 ...
 ```
+
+## Incremental processing
+
+```
+uv run .\main.py
+```
+
+<img width="1141" height="404" alt="image" src="https://github.com/user-attachments/assets/1c975b07-cf29-4ecf-82bf-5eca2e387ab5" />
+
+```
+PS E:\MaoDev\MaoPhotoStorageManager> uv run .\main.py
+1. 扫描建库
+2. 按库增量拷贝
+请输入功能编号：2
+按 3 次任意键开始处理，数据库和文件归档目录：E:\【NAS照片整理】
+按 2 次任意键开始处理，数据库和文件归档目录：E:\【NAS照片整理】
+按 1 次任意键开始处理，数据库和文件归档目录：E:\【NAS照片整理】
+INFO - 开始处理：E:\【NAS照片整理】
+INFO - 开始加载信息库...
+INFO - 完成加载信息库，已索引 11841 个文件
+INFO - 开始加载归档库...
+INFO - 完成加载归档库，已归档 11837 个文件
+按 3 次任意键开始处理，本次跳过已归档的 11837 个文件
+按 2 次任意键开始处理，本次跳过已归档的 11837 个文件
+按 1 次任意键开始处理，本次跳过已归档的 11837 个文件
+INFO - 开始增量拷贝...
+INFO - 已归档文件： 11841/11841 ...
+INFO - 归档完成，跳过已归档文件 11837 个，本次新归档文件 4 个，总计已归档文件 11841 个，信息库索引文件 11841 个
+INFO - 全部处理结束，完成！
+PS E:\MaoDev\MaoPhotoStorageManager>
+```
